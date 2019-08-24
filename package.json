@@ -6,9 +6,10 @@
 	"scripts": {
 		"start": "node server",
 		"server": "nodemon server",
+		"debug": "node --nolazy --inspect-brk=9229 server.js",
 		"client": "npm start --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 	},
 	"author": "Ai ZHANG",
 	"license": "ISC",
@@ -23,7 +24,7 @@
 		"request": "^2.88.0"
 	},
 	"devDependencies": {
-		"concurrently": "^4.1.!",
+		"concurrently": "^4.1.1",
 		"nodemon": "^1.18.11"
 	}
 }
