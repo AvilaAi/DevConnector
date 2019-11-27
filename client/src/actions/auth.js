@@ -11,6 +11,7 @@ import {
 	CLEAR_PROFILE,
 } from './types';
 import setAuthToken from '../utils/setAuthToken';
+
 //Load User
 export const loadUser = () => async dispatch => {
 	if (localStorage.token) {
@@ -28,6 +29,7 @@ export const loadUser = () => async dispatch => {
 		});
 	}
 };
+
 //Register User
 export const register = ({ name, email, password }) => async dispatch => {
 	const config = {
@@ -84,7 +86,6 @@ export const login = (email, password) => async dispatch => {
 };
 
 // logout / clear profile
-
 export const logout = () => dispatch => {
 	dispatch({ type: LOGOUT });
 	dispatch({ type: CLEAR_PROFILE });

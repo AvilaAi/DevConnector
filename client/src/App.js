@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; /// ????
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
@@ -27,9 +27,8 @@ if (localStorage.token) {
 }
 const App = () => {
 	useEffect(() => {
-		///like componentdidmount
 		store.dispatch(loadUser);
-	}, []); ///run only once
+	}, []); 
 	return (
 		<Provider store={store}>
 			<Router>

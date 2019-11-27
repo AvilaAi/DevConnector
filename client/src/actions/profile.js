@@ -168,7 +168,6 @@ export const addEducation = (formData, history) => async dispatch => {
 };
 
 //delete experience
-
 export const deleteExperience = id => async dispatch => {
 	try {
 		const res = await axios.delete(`/api/profile/experience/${id}`);
@@ -187,7 +186,6 @@ export const deleteExperience = id => async dispatch => {
 };
 
 //delete education
-
 export const deleteEducation = id => async dispatch => {
 	try {
 		const res = await axios.delete(`/api/profile/education/${id}`);
@@ -206,7 +204,6 @@ export const deleteEducation = id => async dispatch => {
 };
 
 //delete account & profile
-
 export const deleteAccount = () => async dispatch => {
 	if (window.confirm('Are you sure?')) {
 		try {

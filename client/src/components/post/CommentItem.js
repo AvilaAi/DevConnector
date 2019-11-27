@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,4 @@ CommentItem.propTypes = {
 const mapStateToProps = state => ({
 	auth: state.auth,
 });
-export default connect(
-	mapStateToProps,
-	{ deleteComment }
-)(CommentItem);
+export default connect(mapStateToProps, { deleteComment })(CommentItem);

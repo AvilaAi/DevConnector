@@ -9,6 +9,7 @@ import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import ProfileGithub from './ProfileGithub';
+
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
 	useEffect(() => {
 		getProfileById(match.params.id);
